@@ -1,0 +1,11 @@
+C:\Users\abaggett\source\repos\GeoDataGen\GeoDataGen\bin\Debug\netcoreapp2.1\GeoDataGen.deps.json
+C:\Users\abaggett\source\repos\GeoDataGen\GeoDataGen\bin\Debug\netcoreapp2.1\GeoDataGen.runtimeconfig.json
+C:\Users\abaggett\source\repos\GeoDataGen\GeoDataGen\bin\Debug\netcoreapp2.1\GeoDataGen.runtimeconfig.dev.json
+C:\Users\abaggett\source\repos\GeoDataGen\GeoDataGen\bin\Debug\netcoreapp2.1\GeoDataGen.dll
+C:\Users\abaggett\source\repos\GeoDataGen\GeoDataGen\bin\Debug\netcoreapp2.1\GeoDataGen.pdb
+C:\Users\abaggett\source\repos\GeoDataGen\GeoDataGen\obj\Debug\netcoreapp2.1\GeoDataGen.csprojAssemblyReference.cache
+C:\Users\abaggett\source\repos\GeoDataGen\GeoDataGen\obj\Debug\netcoreapp2.1\GeoDataGen.csproj.CoreCompileInputs.cache
+C:\Users\abaggett\source\repos\GeoDataGen\GeoDataGen\obj\Debug\netcoreapp2.1\GeoDataGen.AssemblyInfoInputs.cache
+C:\Users\abaggett\source\repos\GeoDataGen\GeoDataGen\obj\Debug\netcoreapp2.1\GeoDataGen.AssemblyInfo.cs
+C:\Users\abaggett\source\repos\GeoDataGen\GeoDataGen\obj\Debug\netcoreapp2.1\GeoDataGen.dll
+C:\Users\abaggett\source\repos\GeoDataGen\GeoDataGen\obj\Debug\netcoreapp2.1\GeoDataGen.pdb
