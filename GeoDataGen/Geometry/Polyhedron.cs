@@ -52,6 +52,39 @@ namespace GeoDataGen
             return this;
         }
 
+        public void GenerateShortestDistanceFaces(int AllowAbleDistanceCount) 
+        {
+            AllowAbleDistanceCount = 2;
+            var faces = new List<List<Coordinate>>();
+            foreach (var vertex in this.Vertices)
+            {
+                var copySansOne = this.Vertices.ToArray().ToList();
+                copySansOne.Remove(vertex);
+
+
+                var shortestDistance = copySansOne.GroupBy(x => vertex.Distance(x)).OrderBy(x => x.Key)
+                                                  .Take(AllowAbleDistanceCount);
+
+                foreach (var distanceGroup in shortestDistance)  
+                {
+
+                   //need to generate unique combinations of items in the distance group
+                   //that includes the vertex
+                   //add that to a face
+                   //faces.add(new List<Coordinate>{v1,v2,v3}; etc
+                    
+                }
+                
+
+            }
+        }
+
+        public void GenerateLongestDistanceFaces()
+        {
+
+        }
+
+
 
         public Polyhedron AddVertex(double x, double y, double z)
         {
@@ -82,12 +115,14 @@ namespace GeoDataGen
                 sb.AppendLine(vertex.GetFormated());
             }
             sb.AppendLine("g " + name + "1");
+            //sb.AppendLine("usemtl default");
             sb.AppendLine("s 1"); //smooth shading
             
             //think about performance from strings are evil
             foreach(var face in Faces)
             {
-                var vsb = new StringBuilder();   
+                var vsb = new StringBuilder();
+                vsb.Append("f ");
                 foreach(var vertex in face)
                 {
                     vsb.Append(i(vertex) + "// ");
@@ -145,13 +180,21 @@ namespace GeoDataGen
             this.Y = y;
             this.Z = z;
         }
+
+        public double Distance(Coordinate other)
+        {
+          return  Math.Abs(this.X - other.X) + Math.Abs(this.Y - other.Y) + Math.Abs(this.Z - other.Z);
+        }
+
+
         public override string ToString()
         {
             return "x: " + X + ", y: " + Y + ", z: " + Z;
         }
         public string GetFormated()
         {
-            return string.Format("v {0,5} {0,5} {0,5}", X, Y, Z);
+            //return string.Format("v {0:N} {0:N} {0:N}", X, Y, Z);
+            return "v " + X.ToString("F6") + " " + Y.ToString("F6") + " " + Z.ToString("F6");
         }
     }
 
